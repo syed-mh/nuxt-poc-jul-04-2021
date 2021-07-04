@@ -1,17 +1,17 @@
 <template>
   <div class="boxed">
     <h1>
-      {{ d.name }}
+      {{ product.name }}
     </h1>
     <h2>
-      {{ d.brand }}
+      {{ product.brand }}
     </h2>
     <h3>
       Ingredients
     </h3>
     <ul>
-      <li v-for="i in d.ingredient_list" :key="i">
-        {{ i }}
+      <li v-for="ingredient in product.ingredient_list" :key="ingredient">
+        {{ ingredient }}
       </li>
     </ul>
   </div>
@@ -21,13 +21,13 @@
 export default {
   data() {
     return {
-      d: {}
+      product: {}
     };
   },
   async fetch() {
-    this.d = await fetch(
+    this.product = await fetch(
       `https://skincare-api.herokuapp.com/products/${this.$route.params.id}`
-    ).then(res => res.json());
+    ).then(_response => _response.json());
   }
 };
 </script>

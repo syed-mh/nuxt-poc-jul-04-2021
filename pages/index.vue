@@ -1,7 +1,11 @@
 <template>
   <div class="grid">
-    <NuxtLink v-for="_ in a" :key="_.i" :to="`/${_.i}`">
-      {{ _.n }}
+    <NuxtLink
+      v-for="product in products"
+      :key="product.id"
+      :to="`/${product.id}`"
+    >
+      {{ product.name }}
     </NuxtLink>
   </div>
 </template>
@@ -10,22 +14,13 @@
 export default {
   data() {
     return {
-      a: []
+      products: []
     };
   },
   async fetch() {
-    let _ = await fetch("https://skincare-api.herokuapp.com/products", {
+    this.products = await fetch("https://skincare-api.herokuapp.com/products", {
       mode: "no-cors"
-    });
-    _ = await _.json();
-    const _z = [];
-    _.forEach(_x => {
-      _z.push({
-        i: _x.id,
-        n: _x.name
-      });
-    });
-    this.a = [..._z];
+    }).then(_response => _response.json());
   }
 };
 </script>
