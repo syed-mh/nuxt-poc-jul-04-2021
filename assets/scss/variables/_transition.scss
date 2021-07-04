@@ -1,0 +1,9 @@
+$transition: 250ms ease-in-out;
+$transition--long: 350ms ease-in-out;
+$transition--short: 150ms ease-in-out;
+
+:root {
+  --transition: #{$transition};
+  --transition--long: #{$transition--long};
+  --transition--short: #{$transition--short};
+}

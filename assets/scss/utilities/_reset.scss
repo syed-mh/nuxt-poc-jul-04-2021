@@ -1,0 +1,17 @@
+* {
+  &,
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+  &:hover,
+  &:focus,
+  &:focus-visible,
+  &:focus-within {
+    outline: none;
+  }
+}
+body {
+  margin: 0;
+  font-family: Poppins, sans-serif;
+}

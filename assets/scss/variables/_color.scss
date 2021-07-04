@@ -1,0 +1,19 @@
+$color-primary: #813b7c;
+$color-primary--light: lighten($color-primary, 10%);
+$color-primary--dark: darken($color-primary, 10%);
+$color-accent: #ffbffb;
+$color-accent--light: lighten($color-accent, 10%);
+$color-accent--dark: lighten($color-accent, 10%);
+$color-light: #ffffff;
+$color-dark: #1d1d1d;
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-primary--light: #{$color-primary--light};
+  --color-primary--dark: #{$color-primary--dark};
+  --color-accent: #{$color-accent};
+  --color-accent--light: #{$color-accent--light};
+  --color-accent--dark: #{$color-accent--dark};
+  --color-light: #{$color-light};
+  --color-dark: #{$color-dark};
+}

@@ -1,0 +1,7 @@
+@use './color' as color;
+
+$box-shadow: 0 5px 6px rgba(color.$color-primary, 15%);
+
+:root {
+  --box-shadow: #{$box-shadow};
+}

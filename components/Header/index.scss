@@ -1,0 +1,25 @@
+.site-header {
+  background-color: var(--color-accent);
+  height: 4.7rem;
+  &,
+  .boxed {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    margin: 0;
+    a {
+      color: var(--color-primary);
+      transition: color var(--transition);
+      text-decoration: none;
+      &:hover,
+      &:focus-visible {
+        color: var(--color-primary--dark);
+      }
+    }
+  }
+  .dark {
+    color: var(--color-dark);
+    font-weight: 400;
+  }
+}
